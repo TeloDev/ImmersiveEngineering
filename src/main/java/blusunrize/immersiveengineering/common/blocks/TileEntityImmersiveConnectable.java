@@ -14,13 +14,14 @@ import blusunrize.immersiveengineering.api.DimensionBlockPos;
 import blusunrize.immersiveengineering.api.TargetingInfo;
 import blusunrize.immersiveengineering.api.energy.IICProxy;
 import blusunrize.immersiveengineering.api.energy.IImmersiveConnectable;
+import blusunrize.immersiveengineering.api.energy.IImmersiveConnectablePrecisePassthrough;
 import blusunrize.immersiveengineering.api.energy.ImmersiveNetHandler;
 import blusunrize.immersiveengineering.api.energy.ImmersiveNetHandler.Connection;
 import blusunrize.immersiveengineering.api.energy.WireType;
 import blusunrize.immersiveengineering.common.util.IELogger;
 import blusunrize.immersiveengineering.common.util.Utils;
 
-public abstract class TileEntityImmersiveConnectable extends TileEntityIEBase implements IImmersiveConnectable
+public abstract class TileEntityImmersiveConnectable extends TileEntityIEBase implements IImmersiveConnectable, IImmersiveConnectablePrecisePassthrough
 {
 	protected WireType limitType = null;
 
@@ -49,7 +50,13 @@ public abstract class TileEntityImmersiveConnectable extends TileEntityIEBase im
 	public void onEnergyPassthrough(int amount)
 	{
 	}
-	
+
+	@Override
+	public void onEnergyPassthrough(double amount)
+	{
+		onEnergyPassthrough((int)amount);
+	}
+
 	@Override
 	public boolean allowEnergyToPass(Connection con)
 	{

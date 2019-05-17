@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import blusunrize.immersiveengineering.api.energy.IImmersiveConnectable;
+import blusunrize.immersiveengineering.api.energy.IImmersiveConnectablePrecisePassthrough;
 import blusunrize.immersiveengineering.api.energy.ImmersiveNetHandler;
 import blusunrize.immersiveengineering.api.energy.ImmersiveNetHandler.AbstractConnection;
 import blusunrize.immersiveengineering.api.energy.ImmersiveNetHandler.Connection;
@@ -284,10 +285,20 @@ public class TileEntityConnectorLV extends TileEntityImmersiveConnectable implem
 								ImmersiveNetHandler.INSTANCE.getTransferedRates(worldObj.provider.dimensionId).put(sub,transferredPerCon);
 								IImmersiveConnectable subStart = toIIC(sub.start,worldObj);
 								IImmersiveConnectable subEnd = toIIC(sub.end,worldObj);
-								if(subStart!=null && passedConnectors.add(subStart))
-									subStart.onEnergyPassthrough((int)(r-r*intermediaryLoss));
-								if(subEnd!=null && passedConnectors.add(subEnd))
-									subEnd.onEnergyPassthrough((int)(r-r*intermediaryLoss));
+								if(subStart!=null && passedConnectors.add(subStart)) {
+									if (subStart instanceof IImmersiveConnectablePrecisePassthrough) {
+										((IImmersiveConnectablePrecisePassthrough)subStart).onEnergyPassthrough(r-r*intermediaryLoss);
+									} else {
+										subStart.onEnergyPassthrough((int)(r-r*intermediaryLoss));
+									}
+								}
+								if(subEnd!=null && passedConnectors.add(subEnd)) {
+									if (subEnd instanceof IImmersiveConnectablePrecisePassthrough) {
+										((IImmersiveConnectablePrecisePassthrough)subEnd).onEnergyPassthrough(r-r*intermediaryLoss);
+									} else {
+										subEnd.onEnergyPassthrough((int)(r-r*intermediaryLoss));
+									}
+								}
 							}
 						}
 						received += r;
