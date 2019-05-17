@@ -390,7 +390,7 @@ public class ImmersiveNetHandler
 								for(Connection conB : conLB)
 									if(conB.end.equals(last))
 									{
-										connectionParts.add(conB);
+										connectionParts.add(0, conB);
 										distance += conB.length;
 										if(averageType==null || conB.cableType.getTransferRate()<averageType.getTransferRate())
 											averageType = conB.cableType;
