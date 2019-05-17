@@ -17,8 +17,8 @@ import net.minecraft.util.Vec3;
 public class TileEntityEnergyMeter extends TileEntityImmersiveConnectable
 {
 	public int facing=3;
-	public int lastEnergyPassed = 0;
-	public ArrayList<Integer> lastPackets = new ArrayList<Integer>(25);
+	public double lastEnergyPassed = 0;
+	public ArrayList<Double> lastPackets = new ArrayList<Double>(25);
 	public boolean dummy=false;
 	private int maxTransfer = -1;
 	public int compVal = -1;
@@ -87,7 +87,7 @@ public class TileEntityEnergyMeter extends TileEntityImmersiveConnectable
 	}
 
 	@Override
-	public void onEnergyPassthrough(int amount)
+	public void onEnergyPassthrough(double amount)
 	{
 		lastEnergyPassed += amount;
 	}
@@ -179,13 +179,13 @@ public class TileEntityEnergyMeter extends TileEntityImmersiveConnectable
 		}
 		if (te.lastPackets.size()==0)
 			return 0;
-		int sum = 0;
+		double sum = 0;
 		synchronized (te.lastPackets)
 		{
-			for (int transfer: te.lastPackets)
+			for (double transfer: te.lastPackets)
 				sum += transfer;
 		}
-		return sum/te.lastPackets.size();
+		return (int)sum/te.lastPackets.size();
 	}
 
 }
