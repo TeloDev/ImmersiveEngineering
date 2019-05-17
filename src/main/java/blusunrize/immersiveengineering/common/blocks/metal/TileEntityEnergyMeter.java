@@ -67,7 +67,7 @@ public class TileEntityEnergyMeter extends TileEntityImmersiveConnectable
 			for (Connection c:conns)
 				maxTransfer+=c.cableType.getTransferRate();
 		}
-		float percentage = (getAveragePower()*2)/(float) maxTransfer;
+		double percentage = (getAveragePower()*2)/(double) maxTransfer;
 		int oldComp = compVal;
 		compVal = (int)Math.min(Math.ceil(15*percentage), 15);
 		if (oldComp!=compVal)
@@ -167,7 +167,7 @@ public class TileEntityEnergyMeter extends TileEntityImmersiveConnectable
 			return Vec3.createVectorHelper(xDif>0?.8125:.1875,.4375,.5);
 	}
 
-	public int getAveragePower()
+	public double getAveragePower()
 	{
 		TileEntityEnergyMeter te = this;
 		if (te.dummy)
@@ -185,7 +185,7 @@ public class TileEntityEnergyMeter extends TileEntityImmersiveConnectable
 			for (double transfer: te.lastPackets)
 				sum += transfer;
 		}
-		return (int)sum/te.lastPackets.size();
+		return sum/te.lastPackets.size();
 	}
 
 }
