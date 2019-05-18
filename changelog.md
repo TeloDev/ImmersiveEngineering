@@ -1,3 +1,8 @@
+#####Version Bid's fork
+- fixed inverted direction of current loss measurement
+- added new interface to the API for tracking energy passed with floating point precision
+- changed Current Transformer to track energy passed with floating point precision (right clicking still spams integral values but external mods will get precise values)
+
 #####Version 0.7.7 - BUILT
 - fixed the potion ID error and some minor bugs (thanks malte)
 
@@ -269,7 +274,7 @@
 - fixed wire offset on floodlight and lantern (thanks cobra)
 - fixed ghost arms on wooden pole (thanks cobra)
 - fixed Raytracing (thanks malte0811 & cobra)
-- fixed broken Miló shader
+- fixed broken MilÃ³ shader
 - fixed light-opacity for some solid blocks
 - fixed use+recipe keybinds in the NEI handler
 - fixed table drawing in the manual, closes #646
