@@ -253,7 +253,7 @@ public class BlockMetalDevices2 extends BlockIEBase implements ICustomBoundingbo
 			if(!world.isRemote)
 			{
 				TileEntityEnergyMeter meter = (TileEntityEnergyMeter)te;
-				int transfer = (int)meter.getAveragePower();
+				int transfer = (int)Math.round(meter.getAveragePower());
 				if (meter.dummy) {
 					TileEntity tmp = world.getTileEntity(meter.xCoord, meter.yCoord+1, meter.zCoord);
 					if (tmp instanceof TileEntityEnergyMeter)

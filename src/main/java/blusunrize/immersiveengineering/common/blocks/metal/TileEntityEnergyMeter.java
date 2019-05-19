@@ -69,7 +69,7 @@ public class TileEntityEnergyMeter extends TileEntityImmersiveConnectable
 		}
 		double percentage = (getAveragePower()*2)/(double) maxTransfer;
 		int oldComp = compVal;
-		compVal = (int)Math.min(Math.ceil(15*percentage), 15);
+		compVal = Math.min((int)Math.round(15*percentage), 15);
 		if (oldComp!=compVal)
 		{
 			TileEntity te = worldObj.getTileEntity(xCoord, yCoord-1, zCoord);
