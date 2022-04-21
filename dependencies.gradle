@@ -9,6 +9,7 @@ dependencies {
     compileOnly('com.github.GTNewHorizons:OpenComputers:1.7.5.23-GTNH:api') { transitive = false}
     runtime('com.github.GTNewHorizons:OpenComputers:1.7.5.23-GTNH:dev') { transitive = false}
     compileOnly('thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev')
+    compileOnly('MineTweaker3:MineTweaker3-MC1710-Main:1.7.10-3.0.13.43')
     compile('com.github.GTNewHorizons:Baubles:1.0.1.14:dev') {transitive = false}
 
 
