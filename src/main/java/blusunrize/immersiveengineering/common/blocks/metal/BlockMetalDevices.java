@@ -37,8 +37,8 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-@Optional.Interface(iface = "blusunrize.aquatweaks.api.IAquaConnectable", modid = "AquaTweaks")
-public class BlockMetalDevices extends BlockIEBase implements blusunrize.aquatweaks.api.IAquaConnectable
+//@Optional.Interface(iface = "blusunrize.aquatweaks.api.IAquaConnectable", modid = "AquaTweaks")
+public class BlockMetalDevices extends BlockIEBase //implements blusunrize.aquatweaks.api.IAquaConnectable
 {
 	public IIcon[][] icon_capacitorTop = new IIcon[3][3];
 	public IIcon[][] icon_capacitorBot = new IIcon[3][3];

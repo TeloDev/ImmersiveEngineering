@@ -26,8 +26,8 @@ import cpw.mods.fml.common.Optional;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-@Optional.Interface(iface = "blusunrize.aquatweaks.api.IAquaConnectable", modid = "AquaTweaks")
-public class BlockWoodenDecoration extends BlockIEBase implements blusunrize.aquatweaks.api.IAquaConnectable
+//@Optional.Interface(iface = "blusunrize.aquatweaks.api.IAquaConnectable", modid = "AquaTweaks")
+public class BlockWoodenDecoration extends BlockIEBase //implements blusunrize.aquatweaks.api.IAquaConnectable
 {
 	public BlockWoodenDecoration()
 	{

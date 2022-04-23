@@ -45,8 +45,8 @@ import net.minecraftforge.fluids.IFluidContainerItem;
 import net.minecraftforge.fluids.IFluidHandler;
 import net.minecraftforge.oredict.OreDictionary;
 
-@Optional.Interface(iface = "blusunrize.aquatweaks.api.IAquaConnectable", modid = "AquaTweaks")
-public class BlockMetalDevices2 extends BlockIEBase implements ICustomBoundingboxes, blusunrize.aquatweaks.api.IAquaConnectable
+//@Optional.Interface(iface = "blusunrize.aquatweaks.api.IAquaConnectable", modid = "AquaTweaks")
+public class BlockMetalDevices2 extends BlockIEBase implements ICustomBoundingboxes//, blusunrize.aquatweaks.api.IAquaConnectable
 {
 	public static final int META_breakerSwitch=0;
 	public static final int META_skycrateDispenser=1;

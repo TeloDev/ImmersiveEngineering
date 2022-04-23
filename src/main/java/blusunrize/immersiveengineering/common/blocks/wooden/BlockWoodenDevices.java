@@ -36,8 +36,8 @@ import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.IFluidContainerItem;
 
-@Optional.Interface(iface = "blusunrize.aquatweaks.api.IAquaConnectable", modid = "AquaTweaks")
-public class BlockWoodenDevices extends BlockIEBase implements IPostBlock, blusunrize.aquatweaks.api.IAquaConnectable
+//@Optional.Interface(iface = "blusunrize.aquatweaks.api.IAquaConnectable", modid = "AquaTweaks")
+public class BlockWoodenDevices extends BlockIEBase implements IPostBlock//, blusunrize.aquatweaks.api.IAquaConnectable
 {
 	IIcon[] iconBarrel = new IIcon[3];
 

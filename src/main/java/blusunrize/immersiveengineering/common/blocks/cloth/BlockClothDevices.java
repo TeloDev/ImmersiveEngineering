@@ -21,8 +21,8 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@Optional.Interface(iface = "blusunrize.aquatweaks.api.IAquaConnectable", modid = "AquaTweaks")
-public class BlockClothDevices extends BlockIEBase implements blusunrize.aquatweaks.api.IAquaConnectable
+//@Optional.Interface(iface = "blusunrize.aquatweaks.api.IAquaConnectable", modid = "AquaTweaks")
+public class BlockClothDevices extends BlockIEBase //implements blusunrize.aquatweaks.api.IAquaConnectable
 {
 	IIcon[] iconBarrel = new IIcon[3];
 

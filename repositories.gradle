@@ -18,7 +18,7 @@ repositories {
         }
     }
     maven {
-        name "IC2 Maven"
+        name "IC2 Maven 2"
         url "https://maven2.ic2.player.to/"
         metadataSources {
             mavenPom()
