@@ -18,6 +18,14 @@ repositories {
         }
     }
     maven {
+        name "IC2 Maven"
+        url "https://maven2.ic2.player.to/"
+        metadataSources {
+            mavenPom()
+            artifact()
+        }
+    }
+    maven {
         name "CurseForge Maven"
         url "https://minecraft.curseforge.com/api/maven/"
         metadataSources {
