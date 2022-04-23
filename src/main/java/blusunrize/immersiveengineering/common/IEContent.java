@@ -271,6 +271,7 @@ public class IEContent
 		itemToolbox = new ItemToolbox();
 		itemRevolver = new ItemRevolver();
 		itemBullet = new ItemBullet();
+/*
 		itemFluidContainers = new ItemIEBase("fluidContainers", 64, "bottleCreosote","bucketCreosote",  "bottlePlantoil","bucketPlantoil",  "bottleEthanol","bucketEthanol", "bottleBiodiesel","bucketBiodiesel")
 		{
 			@Override
@@ -294,6 +295,7 @@ public class IEContent
 				return stack.getItemDamage()%2==0?16:1;
 			}
 		};
+ */
 		itemDrill = new ItemDrill();
 		itemDrillhead = new ItemDrillhead();
 		itemToolUpgrades = new ItemToolUpgrade();
@@ -373,6 +375,7 @@ public class IEContent
 		OreDictionary.registerOre("craftingTableWood", new ItemStack(Blocks.crafting_table));
 		OreDictionary.registerOre("rodBlaze", new ItemStack(Items.blaze_rod));
 		OreDictionary.registerOre("charcoal", new ItemStack(Items.coal,1,1));
+/*
 		//Fluid Containers
 		FluidContainerRegistry.registerFluidContainer(fluidCreosote, new ItemStack(itemFluidContainers,1,0), new ItemStack(Items.glass_bottle));
 		FluidContainerRegistry.registerFluidContainer(fluidCreosote, new ItemStack(itemFluidContainers,1,1), new ItemStack(Items.bucket));
@@ -382,6 +385,7 @@ public class IEContent
 		FluidContainerRegistry.registerFluidContainer(fluidEthanol, new ItemStack(itemFluidContainers,1,5), new ItemStack(Items.bucket));
 		FluidContainerRegistry.registerFluidContainer(fluidBiodiesel, new ItemStack(itemFluidContainers,1,6), new ItemStack(Items.glass_bottle));
 		FluidContainerRegistry.registerFluidContainer(fluidBiodiesel, new ItemStack(itemFluidContainers,1,7), new ItemStack(Items.bucket));
+*/
 		//Mining
 		blockOres.setHarvestLevel("pickaxe", 1, 0);//Copper
 		blockOres.setHarvestLevel("pickaxe", 1, 1);//Bauxite
